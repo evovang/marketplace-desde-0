@@ -1,3 +1,6 @@
+/web/assets/
+/web/images/
+
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*
