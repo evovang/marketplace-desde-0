@@ -73,4 +73,7 @@ fos_user:
 
 easy_admin:
     entities:
-        - AppBundle\Entity\Persona
+        Persona:
+            class: AppBundle\Entity\Persona
+            form:
+                fields: ['enabled', 'username', 'email', 'roles', 'lastLogin', 'plainPassword']
