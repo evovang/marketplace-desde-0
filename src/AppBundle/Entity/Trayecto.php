@@ -37,11 +37,11 @@ class Trayecto {
     /**
      * @ORM\Column(type="date")
      */
-    protected $fechaPublicacion;
+    protected $fechaDeViaje;
     /**
      * @ORM\Column(type="time")
      */
-    protected $hora;
+    protected $horaDeViaje;
     /**
      * @ORM\Column(type="float")
      */
@@ -54,6 +54,17 @@ class Trayecto {
      * @ORM\Column(type="integer")
      */
     protected $plazas;
+    
+    public function __construct()
+    {
+    $this->fechaDeViaje = new \DateTime();
+    $this->horaDeViaje = new \DateTime();
+    }
+    
+    public function __toString()
+    {
+    return "Viaje de " . $this->getOrigen() . " a " . $this->getDestino();
+    }
 
     /**
      * Get id
@@ -270,5 +281,51 @@ class Trayecto {
     public function getConductor()
     {
         return $this->conductor;
+    }
+
+    /**
+     * Set fechaDeViaje
+     *
+     * @param \DateTime $fechaDeViaje
+     * @return Trayecto
+     */
+    public function setFechaDeViaje($fechaDeViaje)
+    {
+        $this->fechaDeViaje = $fechaDeViaje;
+
+        return $this;
+    }
+
+    /**
+     * Get fechaDeViaje
+     *
+     * @return \DateTime 
+     */
+    public function getFechaDeViaje()
+    {
+        return $this->fechaDeViaje;
+    }
+
+    /**
+     * Set horaDeViaje
+     *
+     * @param \DateTime $horaDeViaje
+     * @return Trayecto
+     */
+    public function setHoraDeViaje($horaDeViaje)
+    {
+        $this->horaDeViaje = $horaDeViaje;
+
+        return $this;
+    }
+
+    /**
+     * Get horaDeViaje
+     *
+     * @return \DateTime 
+     */
+    public function getHoraDeViaje()
+    {
+        return $this->horaDeViaje;
     }
 }
