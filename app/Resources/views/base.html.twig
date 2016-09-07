@@ -81,9 +81,9 @@
                                </li>                               
                             {% else %}
                                <li>
-                                   <a href="#">
-                                       <button type="button" class="btn btn-primary">Publica un trayecto</button>
-                                   </a>
+                                    <a href="{{ path('private_nuevoTrayecto') }}">
+                                    <button type="button" class="btn btn-primary">Publica un trayecto</button>
+                                    </a>
                                </li>
                                <li>
                                    <a href="{{ path('fos_user_security_logout') }}">
