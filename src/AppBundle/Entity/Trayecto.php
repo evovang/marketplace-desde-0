@@ -1,6 +1,7 @@
 <?php
 namespace AppBundle\Entity;
 
+use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 use Doctrine\ORM\Mapping as ORM;
 	
 /**
@@ -8,6 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="trayecto")
 */
 class Trayecto {
+    
+    use ORMBehaviors\Timestampable\Timestampable;
     
     /**
     * @ORM\ManyToOne(targetEntity="Persona", inversedBy="trayectos")
