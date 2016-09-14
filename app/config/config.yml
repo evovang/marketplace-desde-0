@@ -76,8 +76,8 @@ easy_admin:
         Trayecto:
             class: AppBundle\Entity\Trayecto
             form:
-                fields: ['origen', 'destino', 'calle', 'fechaDeViaje', 'horaDeViaje', 'precio', 'descripcion', 'plazas', 'conductor']
+                fields: ['enabled', 'origen', 'destino', 'calle', 'fechaDeViaje', 'horaDeViaje', 'precio', 'descripcion', 'plazas', 'conductor']
         Persona:
             class: AppBundle\Entity\Persona
             form:
-                fields: ['enabled', 'username', 'email', 'roles', 'lastLogin', 'plainPassword']
+                fields: ['enabled', 'username', 'email', 'roles', 'lastLogin', 'plainPassword', 'avatar']
