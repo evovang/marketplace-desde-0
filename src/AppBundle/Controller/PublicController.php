@@ -92,4 +92,12 @@ $trayectosFiltrados = $queryBuilder->getQuery()->execute();
     'country' => $request->get('country')
         ));
     }
+    
+    /**
+     * @Route("/terminos", name="public_terminos")
+     */
+    public function terminosAction() {
+        return $this->render('terminos/index.html.twig');
+    }
+
 }
