@@ -37,5 +37,4 @@ class Ciudad
         $this->trayectosDondeSoyDestino = new ArrayCollection();
     }
 }
-
 ?>

@@ -25,7 +25,7 @@ class Trayecto {
     */
     protected $id;
 
-    /**
+     /**
      * @ORM\ManyToOne(targetEntity="Ciudad", inversedBy="trayectosDondeSoyOrigen")
      * @ORM\JoinColumn(name="origen_id", referencedColumnName="id")
      */
